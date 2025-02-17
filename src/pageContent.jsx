@@ -6,8 +6,7 @@ import {CSSDocs} from "./Pages/Upcoming CSS/CSSDocs.jsx";
 export const pageContent = {
     homepage: {
         title: 'Upcoming Web Features',
-        content: 'This is a demonstration of CSS View Transitions API.\n' +
-            'Click the navigation links to see different transition effects! (Animated page change via view transitions)'
+        content: 'Here are a handful of upcoming features that I think are pretty neat!'
     },
     javascript: {
         title: 'Upcoming Javascript Changes  ☕',
