@@ -12,7 +12,6 @@ I would also like to classify pages so as my tech stack evolves I can 'deprecate
 Oh my god, I sound like a lunatic, serving documents? It's almost like that's what the internet was made for :^)
 
 There's a lot of todos because i made this super quick
-- Move stuff to react 19
 - Move components to TSX
 - Make the codemirror component just one component with a language that gets passed in, it's stupid to have 3 instances of this in the event a dependency changes
 - Write about react 19
