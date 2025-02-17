@@ -3,7 +3,7 @@ import { Controlled as ControlledEditor } from 'react-codemirror2';
 import 'codemirror/lib/codemirror.css'; // For the code editor styles
 import 'codemirror/mode/javascript/javascript'; // JavaScript mode for syntax highlighting
 
-export const CodeEditor = ({ code, setCode, disabled }) => {
+export const CodeEditor = ({ code, setCode, disabled,language}) => {
     return (
         <ControlledEditor
             value={code}
@@ -11,7 +11,7 @@ export const CodeEditor = ({ code, setCode, disabled }) => {
                 !disabled && setCode(value);
             }}
             options={{
-                mode: 'javascript',
+                mode: language,
                 lineNumbers: true,
             }}
         />

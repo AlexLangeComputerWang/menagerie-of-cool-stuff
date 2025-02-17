@@ -64,8 +64,9 @@ export const TemporalDemoScreen = ({documentation=[0]}) => {
             </div>
             {selectedDocument.htmlToRender}
             <div className="temporal-editor-container">
-                <p1>Javascript</p1>
+                <p>Javascript</p>
                 <CodeEditor
+                    language={'javascript'}
                     code={selectedDocument.codeSnippetString}
                     setCode={setSelectedDocument}
                     disabled={true}

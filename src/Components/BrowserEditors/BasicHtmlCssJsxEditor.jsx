@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { StyleEditor } from "../StyleEditor.jsx";
-import { HtmlEditor } from "../HtmlEditor.jsx";
 import { CodeEditor } from "../CodeEditor.jsx";
 import './BasicHtmlCssJsxEditor.css';
 
@@ -56,19 +54,19 @@ export const BasicHtmlCssJsxEditor = ({ htmlIn, cssIn, jsIn, disabled,documentat
                 <div className="editor-box">
                     <p>Html</p>
 
-                        <HtmlEditor code={html} setCode={setHtml} disabled={disabled} />
+                        <CodeEditor language={'htmlmixed'} code={html} setCode={setHtml} disabled={disabled} />
                 </div>
                 }
                 {cssIn &&
                 <div className="editor-box">
                     <p>CSS</p>
-                    <StyleEditor code={css} setCode={setCSS} disabled={disabled} />
+                    <CodeEditor language={'css'} code={css} setCode={setCSS} disabled={disabled} />
                 </div>
                 }
                 {jsIn &&<>
                 <div className="editor-box">
                     <p>Javascript</p>
-                    <CodeEditor code={js} setCode={setJs} disabled={disabled} />
+                    <CodeEditor language={'javascript'} code={js} setCode={setJs} disabled={disabled} />
                 </div>
 
                 {/* Plain button with no classname */}
