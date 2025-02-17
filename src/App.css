@@ -1,0 +1,78 @@
+nav {
+  border-radius:6px;
+  padding:15px;
+  background-color: #333;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #666;
+  border-radius: 4px;
+  opacity: 0;
+  z-index: -1;
+}
+
+nav a.active::before {
+  opacity: 1;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.page {
+  view-transition-name: page;
+}
+
+
+/* View Transitions */
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes slide-from-right {
+  from { transform: translateX(100%); }
+}
+
+@keyframes slide-to-left {
+  to { transform: translateX(-100%); }
+}
+
+::view-transition-old(page) {
+  animation: 
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(page) {
+  animation: 
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-in,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}

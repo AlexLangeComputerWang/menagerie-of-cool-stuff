@@ -1,0 +1,55 @@
+/* The main container for both the editors and the output */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh; /* full viewport height; adjust as needed */
+    box-sizing: border-box;
+}
+
+
+
+.temporal-editor-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.left-panel {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Space between editor boxes */
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.educative-tabs {
+    display: flex;
+    gap: 2px;
+    padding:5px;
+
+}
+.educative-button{
+    border-radius:6px;
+    padding:5px;
+    min-width:30px;
+}
+
+.execute-button {
+    border-radius:6px;
+    padding:5px;
+    margin:2px;
+}
+
+.right-panel {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid #ddd;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}

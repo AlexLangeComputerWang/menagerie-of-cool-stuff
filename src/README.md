@@ -1,0 +1,1 @@
+If i want to make this a personal site and put it on github i should consider making some common styles, and start to like really really clean stuff up. We should also make sure we minimize dependencies, i think. 
