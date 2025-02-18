@@ -1,6 +1,7 @@
 import React from "react";
 import {JavascriptDocs} from "./Pages/Temporal/JavascriptDocs.jsx";
 import {CSSDocs} from "./Pages/Upcoming CSS/CSSDocs.jsx";
+import {ReactDocs} from "./Pages/ReactDocs/ReactDocs.jsx";
 
 
 export const pageContent = {
@@ -18,6 +19,6 @@ export const pageContent = {
     },
     react19: {
         title: 'React 19 🍹',
-        content: 'Watch how different sections of the page animate during navigation!'
+        content: <ReactDocs/>
     }
 }
