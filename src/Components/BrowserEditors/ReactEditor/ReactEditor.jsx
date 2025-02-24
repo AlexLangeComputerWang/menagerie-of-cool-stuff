@@ -1,4 +1,5 @@
 import React, {useState } from "react";
+import "./ReactEditor.css"
 import { CodeEditor } from "../../CodeEditor.jsx";
 
 export const ReactEditor = () => {
@@ -32,15 +33,19 @@ export const ReactEditor = () => {
   `;
     };
 
-    return <>
-        <div className="editor-box">
-            <p>Javascript</p>
-            <CodeEditor language={'javascript'} code={js} setCode={setJs} />
+    return <div className="react-editor-container">
+        <div className={'react-left-panel'}>
+            <div className="react-editor-box">
+                <p>Javascript</p>
+                <CodeEditor language={'javascript'} code={js} setCode={setJs} />
+            </div>
         </div>
-        <iframe
-            title="Result"
-            className="result-iframe"
-            srcDoc={output()}
-        />
-    </>;
+        <div className={'react-right-panel'}>
+            <iframe
+                title="Result"
+                className="react-result-iframe"
+                srcDoc={output()}
+            />
+        </div>
+    </div>;
 };
