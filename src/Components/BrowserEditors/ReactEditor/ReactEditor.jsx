@@ -1,5 +1,5 @@
-import React, {useState } from "react";
-import "./ReactEditor.css"
+import React, { useState } from "react";
+import "./ReactEditor.css";
 import { CodeEditor } from "../../CodeEditor.jsx";
 
 export const ReactEditor = () => {
