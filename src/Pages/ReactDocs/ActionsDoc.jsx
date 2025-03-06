@@ -10,7 +10,11 @@ const ActionsDoc = () => {
             </p>
             <br/>
             <p>React 19 has support for using async functions in transitions to handle pending states, errors, forms, and optimistic updates automatically.</p>
-            <UseTransitionDoc/>
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <div style={{flex:'0 0 50%'}}>
+                    <UseTransitionDoc/>
+                </div>
+            </div>
         </div>
     );
 };

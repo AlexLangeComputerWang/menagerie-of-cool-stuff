@@ -4,10 +4,11 @@ import {CodeEditor} from "../../Components/CodeEditor.jsx";
 const UseTransitionDoc = () => {
     return (
         <div>
-            <h3>UseTransition</h3>
-            <p>For example, you can use useTransition to handle the pending state for you:</p>
+            <p>For example, you can use <b>useTransition</b> to handle the pending state for you:</p>
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
             <CodeEditor code={codeAsString} setCode={()=>{}} disabled language={"javascript"}/>
             <UpdateName/>
+            </div>
             <p>The async transition will immediately set the isPending state to true,
                 make the async request(s), and switch isPending to false after any transitions.
                 This allows you to keep the current UI responsive and interactive

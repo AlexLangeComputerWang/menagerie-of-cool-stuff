@@ -7,20 +7,18 @@ export const UseOptimisticDoc = () => {
         <div>
             <h2>useOptimistic</h2>
             <p>The useOptimistic Hook provides a way to optimistically update the user interface before a background operation, like a network request, completes. In the context of forms, this technique helps to make apps feel more responsive. When a user submits a form, instead of waiting for the server’s response to reflect the changes, the interface is immediately updated with the expected outcome.
-
-</p><br/><p>For example, when a user types a message into the form and hits the “Send” button, the useOptimistic Hook allows the message to immediately appear in the list with a “Sending…” label, even before the message is actually sent to a server. This “optimistic” approach gives the impression of speed and responsiveness. The form then attempts to truly send the message in the background. Once the server confirms the message has been received, the “Sending…” label is removed.</p>
-        <h4>Demo Component:</h4>
-            <CodeEditor code={codeAsString} setCode={()=>{}} disabled language={"javascript"}/>
-
-            <UseOptimisticDemo />
+            </p><br/><p>For example, when a user types a message into the form and hits the “Send” button, the useOptimistic Hook allows the message to immediately appear in the list with a “Sending…” label, even before the message is actually sent to a server. This “optimistic” approach gives the impression of speed and responsiveness. The form then attempts to truly send the message in the background. Once the server confirms the message has been received, the “Sending…” label is removed.</p>
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <div style={{flex:'0 0 50%'}}>
+                    <CodeEditor code={codeAsString} setCode={()=>{}} disabled language={"javascript"}/>
+                </div>
+                <div style={{flex:'0 0 50%'}}>
+                    <UseOptimisticDemo />
+                </div>
+            </div>
         </div>
     );
 };
-
-
-
-
-
 
 export const UseOptimisticDemo=()=> {
   const [messages, setMessages] = useState([
@@ -32,8 +30,6 @@ export const UseOptimisticDemo=()=> {
   }
   return <Thread messages={messages} sendMessage={sendMessage} />;
 }
-
-  
 
 const Thread = ({ messages, sendMessage })=> {
     const formRef = useRef();
@@ -74,7 +70,6 @@ async function deliverMessage(message) {
     return message;
 }
 
-
 const codeAsString = `export const UseOptimisticDemo=()=> {
   const [messages, setMessages] = useState([
     { text: "Hello there!", sending: false, key: 1 }
@@ -85,8 +80,6 @@ const codeAsString = `export const UseOptimisticDemo=()=> {
   }
   return <Thread messages={messages} sendMessage={sendMessage} />;
 }
-
-  
 
 const Thread = ({ messages, sendMessage })=> {
     const formRef = useRef();
